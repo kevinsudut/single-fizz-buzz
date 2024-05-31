@@ -18,7 +18,7 @@ type monitoringHandleSingleFizzBuzzWithRange struct {
 	Response string `json:"response"`
 }
 
-func (h *handler) handleSingleFizzBuzzWithRange(w http.ResponseWriter, r *http.Request) {
+func (h handler) handleSingleFizzBuzzWithRange(w http.ResponseWriter, r *http.Request) {
 	var (
 		fromStr  = r.URL.Query().Get("from")
 		toStr    = r.URL.Query().Get("to")
